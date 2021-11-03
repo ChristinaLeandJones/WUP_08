@@ -67,7 +67,9 @@ summary.lm(simp)
 cor(bears$LENGTH,bears$CHEST)
 ```
 
+## Conclusion 
 
+CHEST is a better variable to use to predict for the length of bears because the adjusted R squared test shows for chest is at 0.7869. The adjusted R squared of the fit for CHEST is larger than the adjusted R squared of the fit for NECK
 
 
 

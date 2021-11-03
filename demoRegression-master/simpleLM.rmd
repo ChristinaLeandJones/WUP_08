@@ -9,6 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Introduction 
+
+We are comparing the variables CHEST and NECK to see which is better at predicting the LENGTH of a bear. 
+
+
+
 ## make a simple regression model
 
 ```{r}
@@ -24,6 +30,10 @@ abline(simp)
 summary.lm(simp)
 ```
 
+This scatter plot and numerical summary of the variables of NECK and LENGTH. The adjusted R squared is at 0.7476. 
+As the circumference of the neck increases so does the length of the bear. 
+
+
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
 
@@ -34,12 +44,16 @@ predict(simp,new)
 predict(simp,new,se.fit=TRUE, interval = "prediction")
 ```
 
+This numerical summary is the prediction of the length of a bear when the neck is at 17, 22, and 26. 
+
+
 ## Nurerical Results
 
 ```{r}
 cor(bears$LENGTH,bears$NECK)
 ```
 
+This is the correlation coefficient of LENGTH and NECK.
 
 
 
@@ -50,6 +64,8 @@ cor(bears$LENGTH,bears$NECK)
 
 
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
+
+## Model LENGTH ~ CHEST
 
 
 ```{r}
@@ -66,10 +82,13 @@ summary.lm(simp)
 ```{r}
 cor(bears$LENGTH,bears$CHEST)
 ```
+This is the correlation coefficient of LENGTH and .
+
+
 
 ## Conclusion 
 
-CHEST is a better variable to use to predict for the length of bears because the adjusted R squared test shows for chest is at 0.7869. The adjusted R squared of the fit for CHEST is larger than the adjusted R squared of the fit for NECK
+CHEST is a better variable to use to predict for the length of bears because the adjusted R squared test shows for chest is at 0.7869. The adjusted R squared of the fit using CHEST is larger than the adjusted R squared of the fit using NECK
 
 
 

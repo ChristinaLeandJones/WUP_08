@@ -75,6 +75,10 @@ abline(simp)
 summary.lm(simp)
 ```
 
+This scatter plot and numerical summary of the variables of CHEST and LENGTH. The adjusted R squared is at 0.7869. 
+As the circumference of the chest increases so does the length of the bear. 
+
+
 
 ## Numerical Summary 
 
@@ -88,7 +92,7 @@ This is the correlation coefficient of LENGTH and .
 
 ## Conclusion 
 
-CHEST is a better variable to use to predict for the length of bears because the adjusted R squared test shows for chest is at 0.7869. The adjusted R squared of the fit using CHEST is larger than the adjusted R squared of the fit using NECK
+CHEST is a better variable to use to predict for the length of bears.The adjusted R squared test shows for CHEST is at 0.7869 and the adjusted R squared for NECK is at 0.7476. The adjusted R squared of the fit using CHEST is larger than the adjusted R squared of the fit using NECK.
 
 
 
